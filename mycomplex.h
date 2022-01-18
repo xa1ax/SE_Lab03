@@ -1,6 +1,6 @@
 /*!
     @file
-    @brief Заголовочный файл класса Complex.
+    @brief Р—Р°РіРѕР»РѕРІРѕС‡РЅС‹Р№ С„Р°Р№Р» РєР»Р°СЃСЃР° Complex
 */
 #ifndef _MY_COMPLEX_H_
 #define _MY_COMPLEX_H_
@@ -8,22 +8,22 @@
 using namespace std;
 
 /*!
-    @brief Класс комплексного числа
+    @brief РљР»Р°СЃСЃ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 */
 class Complex
 {
     /*!
-        @brief Действительная составляющая
+        @brief Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅР°СЏ СЃРѕСЃС‚Р°РІР»СЏСЋС‰Р°СЏ
     */
     double Re;
 
     /*!
-        @brief Мнимая составляющая
+        @brief РњРЅРёРјР°СЏ СЃРѕСЃС‚Р°РІР»СЏСЋС‰Р°СЏ
     */
     double Im;
 
     /*!
-        @brief Список членов класса
+        @brief РЎРїРёСЃРѕРє С‡Р»РµРЅРѕРІ РєР»Р°СЃСЃР°
     */
     public:
         Complex(double aRe = 0, double aIm = 0);
@@ -31,24 +31,24 @@ class Complex
         ~ Complex();
 
         /*!
-            @brief Установление мнимой и действительной состовляющих
+            @brief РЈСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РјРЅРёРјРѕР№ Рё РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕР№ СЃРѕСЃС‚РѕРІР»СЏСЋС‰РёС…
         */
         void Set(double aRe, double aIm = 0);
         operator double();
 
         /*!
-            @brief Модуль комплексного числа
+            @brief РњРѕРґСѓР»СЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
         */
         double abs();
 
         /*!
-            @brief Дружественный класс операции перегрузки ввода >>
+            @brief Р”СЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Р№ РєР»Р°СЃСЃ РѕРїРµСЂР°С†РёРё РїРµСЂРµРіСЂСѓР·РєРё РІРІРѕРґР° >>
         */
         friend istream & operator >> (istream &, Complex &);
 
 
         /*!
-            @brief Дружественный класс операции перегрузки вывода <<
+            @brief Р”СЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Р№ РєР»Р°СЃСЃ РѕРїРµСЂР°С†РёРё РїРµСЂРµРіСЂСѓР·РєРё РІС‹РІРѕРґР° <<
         */
         friend ostream & operator << (ostream &, Complex &);
         Complex operator + (const Complex &);
@@ -56,20 +56,20 @@ class Complex
         Complex operator + (const double &);
 
         /*!
-            @brief  Дружественный класс операции сложения
+            @brief  Р”СЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Р№ РєР»Р°СЃСЃ РѕРїРµСЂР°С†РёРё СЃР»РѕР¶РµРЅРёСЏ
         */
         friend Complex operator + (const double &, const Complex &);
         Complex operator - (const double &);
 
         /*!
-            @brief  Дружественный класс операции вычитания
+            @brief  Р”СЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Р№ РєР»Р°СЃСЃ РѕРїРµСЂР°С†РёРё РІС‹С‡РёС‚Р°РЅРёСЏ
         */
         friend Complex operator - (const double &, const Complex &);
         Complex operator * (const Complex &);
         Complex operator * (const double&);
 
         /*!
-            @brief  Дружественный класс операции умножения
+            @brief  Р”СЂСѓР¶РµСЃС‚РІРµРЅРЅС‹Р№ РєР»Р°СЃСЃ РѕРїРµСЂР°С†РёРё СѓРјРЅРѕР¶РµРЅРёСЏ
         */
         friend Complex operator * (const double &, const Complex &);
         Complex operator / (const double &);
